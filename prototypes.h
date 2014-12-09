@@ -1,3 +1,4 @@
+#define bool unsigned char
 #define IIO_MAX_NAME_LENGTH 30
 
 #define FORMAT_SCAN_ELEMENTS_DIR "%s/scan_elements"
@@ -43,7 +44,7 @@ struct iio_channel_info {
 	unsigned bytes;
 	unsigned bits_used;
 	unsigned shift;
-	uint64_t mask;
+	unsigned int mask;
 	unsigned is_signed;
 	unsigned enabled;
 	enum iio_endian endianness;
@@ -63,7 +64,7 @@ static inline int iioutils_get_type(unsigned *is_signed,
 			     unsigned *bytes,
 			     unsigned *bits_used,
 			     unsigned *shift,
-			     uint64_t *mask,
+			     unsigned int *mask,
 				 enum iio_endian *endianness,
 			     const char *device_dir,
 			     const char *name,

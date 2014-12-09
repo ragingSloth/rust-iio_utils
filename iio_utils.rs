@@ -7,5 +7,5 @@ extern {
 }
 
 fn main(){
-    unsafe {println!("your dir {}", set_dev_paths(*mut "ad9361-phy") as i16)}
+    unsafe {println!("your dir {}", set_dev_paths("ad9361-phy") as i16)}
 }
